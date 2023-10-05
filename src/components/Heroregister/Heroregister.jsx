@@ -61,10 +61,14 @@ const Heroregister = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type={!showPassword? "password" :"text"} name='password' placeholder="password" className="input input-bordered" required />
-          <span className="cursor-pointer" onClick={() =>setShowPassword(!showPassword)}>
+       <div className="relative">
+       <div className="">
+         <input type={!showPassword? "password" :"text"} name='password' placeholder="password" className="input input-bordered" required />
+         </div>
+          <span className="cursor-pointer absolute top-4 text-lg right-2" onClick={() =>setShowPassword(!showPassword)}>
             {showPassword ? <FaEye></FaEye> :<FaEyeSlash></FaEyeSlash>}
           </span>
+       </div>
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
