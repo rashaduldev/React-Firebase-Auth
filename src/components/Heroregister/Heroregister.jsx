@@ -28,11 +28,6 @@ const Heroregister = () => {
 setRegisterError('Password must be 1uppercase');
 return ;
     }
-    // if (password) {
-      
-    // }
-
-
     // Create user
     createUserWithEmailAndPassword(auth,email,password)
     .then(result=>{
@@ -45,8 +40,6 @@ return ;
       setRegisterError(err.message);
     })
    
-    // console.log('heroregister');
-    // console.log(registerError);
 };
 
     return (
@@ -76,6 +69,9 @@ return ;
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
+        </div>
+        <div>
+          <input ></input>
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
