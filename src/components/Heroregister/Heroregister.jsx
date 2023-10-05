@@ -3,7 +3,7 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { useState } from "react";
-import { AiFillEye,AiFillEyeInvisible } from 'react-icons/fa';
+import { FaEye,FaEyeSlash } from 'react-icons/fa';
 
 
 const Heroregister = () => {
@@ -63,7 +63,7 @@ const Heroregister = () => {
           </label>
           <input type={!showPassword? "password" :"text"} name='password' placeholder="password" className="input input-bordered" required />
           <span className="cursor-pointer" onClick={() =>setShowPassword(!showPassword)}>
-            {showPassword ? <AiFillEye></AiFillEye>:<AiFillEyeInvisible></AiFillEyeInvisible>}
+            {showPassword ? <FaEye></FaEye> :<FaEyeSlash></FaEyeSlash>}
           </span>
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
