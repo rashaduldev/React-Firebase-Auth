@@ -24,6 +24,10 @@ const Heroregister = () => {
       setRegisterError('Password should be at least 6 characters');
       return;
     } 
+    else if (!/^.*?[A-Z].*?$/.test(password)){
+setRegisterError('Password must be 1uppercase');
+return ;
+    }
     // if (password) {
       
     // }
@@ -91,6 +95,7 @@ const Heroregister = () => {
 </div>
         </div>
     );
+    
 };
 
 export default Heroregister;
