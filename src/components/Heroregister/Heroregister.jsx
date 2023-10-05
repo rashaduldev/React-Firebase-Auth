@@ -59,8 +59,8 @@ return ;
             <span className="label-text">Password</span>
           </label>
        <div className="relative">
-       <div className="">
-         <input type={!showPassword? "password" :"text"} name='password' placeholder="password" className="input input-bordered" required />
+       <div className="w-full">
+         <input type={!showPassword? "password" :"text"} name='password' placeholder="password" className="input input-bordered w-full" required />
          </div>
           <span className="cursor-pointer absolute top-4 text-lg right-2" onClick={() =>setShowPassword(!showPassword)}>
             {showPassword ? <FaEye></FaEye> :<FaEyeSlash></FaEyeSlash>}
@@ -70,9 +70,12 @@ return ;
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
-        <div>
-          div
-        </div>
+
+          <input type="checkbox" id="myCheckbox"  />
+          <label for="myCheckbox">This checkbox is checked by default</label>
+
+     
+       
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
