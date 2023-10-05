@@ -3,12 +3,15 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { useState } from "react";
+import { AiFillEye,AiFillEyeInvisible } from 'react-icons/fa';
 
 
 const Heroregister = () => {
 
   const [registerError,setRegisterError] =useState('');
   const [success,setSuccess] = useState('');
+  const [showPassword,setShowPassword] = useState(false);
+
   console.log(registerError);
   const handleRegistration=e=>{
     e.preventDefault();
@@ -21,8 +24,10 @@ const Heroregister = () => {
       setRegisterError('Password should be at least 6 characters');
       return;
     } 
+    // if (password) {
+      
+    // }
 
-    
 
     // Create user
     createUserWithEmailAndPassword(auth,email,password)
@@ -56,7 +61,10 @@ const Heroregister = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+          <input type={!showPassword? "password" :"text"} name='password' placeholder="password" className="input input-bordered" required />
+          <span className="cursor-pointer" onClick={() =>setShowPassword(!showPassword)}>
+            {showPassword ? <AiFillEye></AiFillEye>:<AiFillEyeInvisible></AiFillEyeInvisible>}
+          </span>
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
