@@ -22,6 +22,8 @@ const Heroregister = () => {
       return;
     } 
 
+    
+
     // Create user
     createUserWithEmailAndPassword(auth,email,password)
     .then(result=>{
